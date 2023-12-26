@@ -3,4 +3,4 @@ An ongoing body of research and development has been invested into studying the 
 
 This project seeks to explore that question through examining several datasets asspociated with the ChillsDB database, a collection of response to chill inducing stimuli including film, speech, and music. By establishing a threshhold for the physical effects of chills, and qualifying them as a good or bad phenomenon, predictive models can be developed to prescreen other media for potential subliminal negative emotional response. 
 
-While not perhaps the most dramatic or dangerous example of genralized artificial intelligence backfiring, the off-putting quality of the uncanny valley is a substantial obstacle in the adoption of these tools. If not analyzed more effectively and countered,  it could lead generative pretrained models to go the way of Zoltar. 
+While not perhaps the most dramatic or dangerous example of generalized artificial intelligence backfiring, the off-putting quality of the uncanny valley is a substantial obstacle in the adoption of these tools. If not analyzed more effectively and countered,  it could lead generative pretrained models to go the way of Zoltar. 
