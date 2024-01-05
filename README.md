@@ -8,7 +8,6 @@ While not perhaps the most dramatic or dangerous example of generalized artifici
 
 
 Authors
-Contributors names and contact info
 
 J.Gray
 jessemangray@gmail.com
