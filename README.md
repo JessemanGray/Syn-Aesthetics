@@ -1,4 +1,7 @@
 # Syn-Aesthetics
+
+https://medium.com/@JesseGray/aesthetic-dysphoria-asking-for-directions-in-the-uncanny-valley-c323e3b79776
+
 An ongoing body of research and development has been invested into studying the effects of the 'uncanny valley' in film, animation, and visual media, but much less attention has been paid to how these reactions relate to other media that use AI algorithms to approximate human observation and interaction. Within these emerging technologies is the potential presence of an inherent stress-inducing quality in LLM-driven writing, speech, music, and chat models, possibly even extending to self-driving cars. Could regularly interacting with a generative pre-trained model instill a measurable sense of dysphoria?
 
 This project seeks to explore that question through examining several datasets associated with the ChillsDB database, a collection of responses to chill inducing stimuli including film, speech, and music. By establishing a threshhold for the physical effects of chills, and qualifying them as a good or bad phenomenon, predictive models can be developed to prescreen other media for potential subliminal negative emotional response. 
