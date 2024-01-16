@@ -8,21 +8,33 @@ This project seeks to explore that question through examining several datasets a
 
 While not perhaps the most dramatic or dangerous example of generalized artificial intelligence backfiring, the off-putting quality of the uncanny valley is a substantial obstacle in the adoption of these tools. If not analyzed more effectively and countered,  it could lead generative pretrained models to go the way of Zoltar. 
 
+Description:
 
+A comprehensive study of the 'uncanny valley' effect in AI-generated media, and its implications on AI adoption
 
-Authors
+Key Features:
 
-J.Gray
-jessemangray@gmail.com
+Comprehensive analysis of various datasets from ChillsDB.
+Detailed exploration of the 'uncanny valley' effect.
+Insightful visualizations of the physical and emotional responses to AI-generated media.
+Innovative approach to engineering more concordant AI models.
 
-Version History
+Installation
+For this project I wanted to keep things lightweight and flexible to maximize accessibility and focus on EDA instead of trying to create a toolkit to address the question at hand. Google Colab Jupyter notebooks offer a user friendly framework for data science, and internally support some of the most effective packages and libraries for modeling and visualisation. The datasets we are working with are available in this repository, and also via Harvard dataverse here: 
 
-0.1
-Initial Releasea
+https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/ADLSZE 
+
+along with several other ChillsDb datasets that were not part of this project.
+
+Usage
+This project is a preliminary exploration of data that could be used to accurately gauge biometric responses to various media. Possible applications could include productizing to be included in fitbit and other wearable tchnologies, and research into quantifying the uncanny valleyt effect in different population groups. 
+
 
 License
 This project is licensed under the MIT License - see the LICENSE.md file for details
 
+Contact
 
-
+Jesse Gray
+jessemangray@gmail.com
 
