@@ -72,15 +72,7 @@ along with several other ChillsDb datasets that are not yet part of this project
 
 
 
-![Screen Shot 2024-01-20 at 2 38 17 PM](https://github.com/JessemanGray/Syn-Aesthetics/assets/123507565/da4f80bf-1744-4122-8edf-8997fe3251d6)
 
-
-
-
-![Screen Shot 2024-01-20 at 2 38 25 PM](https://github.com/JessemanGray/Syn-Aesthetics/assets/123507565/eed4ff38-761b-44b1-902b-9eb52ec70203)
-
-
-![Screen Shot 2023-11-13 at 2 57 11 PM](https://github.com/JessemanGray/Syn-Aesthetics/assets/123507565/dafefacf-8e09-4bd5-b9f8-828a390cc29a)
 
 Usage:
 This project is a preliminary exploration of data that could be used to accurately gauge biometric responses to various media. Possible applications could include productizing to be included in fitbit and other wearable tchnologies, and research into quantifying the uncanny valleyt effect in different population groups. 
