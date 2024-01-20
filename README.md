@@ -68,16 +68,13 @@ Another aspect that may seem obscure but I feel is worth noting: one of the prin
 
 It may seem like just optics 👀 if there are not other measures, but even then it can raise awareness of the need for micro-progessions as well as major improvements in consumption habits.
 
-![Screen Shot 2024-01-20 at 2 34 13 PM](https://github.com/JessemanGray/Syn-Aesthetics/assets/123507565/27ddae47-4d8a-4050-93f8-bb6b8c5e9fb7)
-
 By tweaking the basic tools used to complete common visualization tasks, the data is not only more appealing to my personal sensibilities, but has a distinctly smaller footprint than many Power BI, Tableau, and Excel dashboards. When we hard code vectorization and quantization into the model, we get an even better performance. As someone who's main experience with sustainable design is in building and bio-char, I am still learning about best practices in data managemant, storage, and development, so open to suggestions and contributions there for sure :)
 
-![Screen Shot 2024-01-20 at 2 35 36 PM](https://github.com/JessemanGray/Syn-Aesthetics/assets/123507565/91e603a0-98e3-4e97-ad5b-e19f71112b30)
+
+![Screen Shot 2024-01-20 at 2 36 07 PM](https://github.com/JessemanGray/Syn-Aesthetics/assets/123507565/c27c4c5c-f386-469a-bdf0-3f950a9eba14)
 
 
 Here is a rabbit-hole that I would like to explore related to the data viz of this project. By removing all values and subject matter we get an approximation of the data points that resembles a unique cloud structure. By abstracting the relationships we can make inferences that might not be as apparent as labeled data. This basic principle could have legs in regards to computer vision and re-inputting to see how a GAN model might interpret it. 
-
-![Screen Shot 2024-01-20 at 2 36 07 PM](https://github.com/JessemanGray/Syn-Aesthetics/assets/123507565/c27c4c5c-f386-469a-bdf0-3f950a9eba14)
 
 ![Screen Shot 2024-01-20 at 2 37 47 PM](https://github.com/JessemanGray/Syn-Aesthetics/assets/123507565/507e8d3d-7caf-4e9f-b5c9-9b8ed7fde78a)
 
