@@ -52,6 +52,7 @@ along with several other ChillsDb datasets that are not yet part of this project
 
 
 Standard Import Library for EDA and data viz:
+
 ![Screen Shot 2024-01-20 at 2 31 18 PM](https://github.com/JessemanGray/Syn-Aesthetics/assets/123507565/80ffc35e-d4da-46d3-adaf-93b7b6d36403)
 
 Next we import our datasets from the Syn-Aesthetic repository for ease of access. Initially I kept them in Google Drive to work with at home. Looking forward to comparing the other available datasets. Initially this project was focused solely on good chills, with inspirational speeches, frisson in music, and good chills in movies being the focus. As the project has evolved the I am  interested in expanding the spotlight to driving and piloting simulations, aautonomous vehicles, and other deep reinforcement learning systems. 
@@ -60,11 +61,19 @@ Next we import our datasets from the Syn-Aesthetic repository for ease of access
 
 
 ![Screen Shot 2024-01-20 at 2 32 45 PM](https://github.com/JessemanGray/Syn-Aesthetics/assets/123507565/bd1e5076-7514-4f23-aad4-0540cb74fb24)
+
+
 As a visual learner, using eye candy is a core part of my EDA process. By pushing the initial data set through various filters and comparing multiple variabless, a different storyline than the one I had originally made an outline for emerged. As one of my first completed self-driven projects that I felt had value in sharing with the data science and machine learning community, the patterns that stood out inspired me to take a different direction entirely, and allowed some leaps of thought that wouldn't have been possible otherwise. 
+
+
 ![Screen Shot 2024-01-20 at 2 33 18 PM](https://github.com/JessemanGray/Syn-Aesthetics/assets/123507565/d033887b-02b1-4ba2-83e7-37f3b1d84b5b)
+
+
 Another aspect that may seem obscure but I feel is worth noting: one of the principles that I feel should be built in to any successful project is factoring in its environmental impact. Even though we can quantify the significant value that simple fixes like having a dark background, or prioritizing red, green, and orange over blue seem pointless compared to the degree of climate change occuring, but there is a power in being able to exponentially increase the benefits, as opposed to deferring to the status quo.
 
+
 ![Screen Shot 2024-01-20 at 2 34 13 PM](https://github.com/JessemanGray/Syn-Aesthetics/assets/123507565/27ddae47-4d8a-4050-93f8-bb6b8c5e9fb7)
+
 
 It may seem like just optics 👀 if there are not other measures, but even then it can raise awareness of the need for micro-progessions as well as major improvements in consumption habits.
 
