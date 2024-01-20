@@ -46,7 +46,7 @@ Key Features:
 
 Installation:
 
-I wanted to keep this project  lightweight and flexible to maximize access and focus on EDA instead of building a toolkit to address the question. Google Colaboratory is an open-source Jupyter notebook that offers user-friendly framework for data science, and internally support a diverse range of packages and libraries. It's especially good as as a scratchbook to test models and run multiple approaches to see which one works best for the datset at hand. Colab is kind of a sleeper hit, but it's been invaluable to me as a problem-solving tool. More info can be found here: 
+I wanted to keep this project  lightweight and flexible to maximize access and focus on EDA instead of building a toolkit to address the question. Google Colaboratory is an open-source Jupyter notebook that offers user-friendly framework for data science, and internally supports a diverse range of packages and libraries. It's especially good as as a scratchbook to test models and run multiple approaches to see which one works best for the datset at hand. Colab is kind of a sleeper hit, but it's been invaluable to me as a problem-solving tool. More info can be found here: 
 
 https://colab.research.google.com/
 
