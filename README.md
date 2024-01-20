@@ -125,7 +125,7 @@ Your time and contribution is valued ⏳ 💰
 
 Thanks!
 
-For a deeper dive into the thought process and conclusions behind this notebook please see the Medium article link at the top of this page ▲
+For a deeper dive into the thought process and conclusions behind this notebook please see the Medium article link at the top of this page 👆
 
 Contact:
 
