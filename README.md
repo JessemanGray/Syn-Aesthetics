@@ -3,13 +3,21 @@
 https://medium.com/@JesseGray/aesthetic-dysphoria-asking-for-directions-in-the-uncanny-valley-c323e3b79776
 
 Table of Contents:
+
 Overview
-Description(long stoy short)
+
+Description(long story short)
+
 Key features
+
 Installation
+
 Usage
+
 License
+
 Contributions
+
 Contact
 
 Overview:
