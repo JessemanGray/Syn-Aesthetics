@@ -68,7 +68,7 @@ Another aspect that may seem obscure but I feel is worth noting: one of the prin
 
 It may seem like just optics 👀 if there are not other measures, but even then it can raise awareness of the need for micro-progessions as well as major improvements in consumption habits.
 
-By tweaking the basic tools used to complete common visualization tasks, the data is not only more appealing to my personal sensibilities, but has a distinctly smaller footprint than many Power BI, Tableau, and Excel dashboards. When we hard code vectorization and quantization into the model, we get an even better performance. As someone who's main experience with sustainable design is in building and bio-char, I am still learning about best practices in data managemant, storage, and development, so open to suggestions and contributions there for sure :)
+By tweaking the basic tools used to complete common visualization tasks, the data is not only more appealing to my personal sensibilities, but has a distinctly smaller footprint than many Power BI, Tableau, and Excel dashboards. When we hard code vectorization and quantization into the model, we get an even better performance. As someone who's main experience with sustainable design is in building and bio-char, I am still learning about best practices in data managemant, storage, and development, so open to suggestions and contributions:)
 
 
 ![Screen Shot 2024-01-20 at 2 36 07 PM](https://github.com/JessemanGray/Syn-Aesthetics/assets/123507565/c27c4c5c-f386-469a-bdf0-3f950a9eba14)
