@@ -103,13 +103,19 @@ Contributions:
 Any and all insight into the phenomenon of the uncanny valley is hughly encouraged.
 If so inclined, please follow the following guidelines:
 
-🍴this repository to access a copy to work with.
-Grow a new 🌱  to keep changes organized.
-💍 Please write clear commit messages.
-Push to the 🍴 repository to upload your changes to GitHub.
-Please submit a pull request so we can review your changes 🔍.
-Your contribution is valued 💰
-Thanks for your ⏳
+please 🍴 with this repository
+
+grow a new 🌱 to keep changes organized
+
+💍 please write clear commit messages
+
+push to the 🍴 repository to upload your changes to GitHub
+
+please submit a pull request so we can review your changes 🔍
+
+Your time and contribution is valued ⏳ 💰
+
+Thanks!
 
 
 Contact:
