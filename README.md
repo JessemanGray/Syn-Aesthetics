@@ -61,39 +61,31 @@ Next we import our datasets from the Syn-Aesthetic repository for ease of access
 
 ![Screen Shot 2024-01-20 at 2 32 45 PM](https://github.com/JessemanGray/Syn-Aesthetics/assets/123507565/bd1e5076-7514-4f23-aad4-0540cb74fb24)
 As a visual learner, using eye candy is a core part of my EDA process. By pushing the initial data set through various filters and comparing multiple variabless, a different storyline than the one I had originally made an outline for emerged. As one of my first completed self-driven projects that I felt had value in sharing with the data science and machine learning community, the patterns that stood out inspired me to take a different direction entirely, and allowed some leaps of thought that wouldn't have been possible otherwise. 
-![Screen Shot 2024-01-20 at 2 32 45 PM](https://github.com/JessemanGray/Syn-Aesthetics/assets/123507565/a1ddec38-b9fe-499c-86a5-a173a3ff7f8d)
-![Screen Shot 2024-01-20 at 2 32 45 PM](https://github.com/JessemanGray/Syn-Aesthetics/assets/123507565/a1ddec38-b9fe-499c-86a5-a173a3ff7f8d)
+![Screen Shot 2024-01-20 at 2 33 18 PM](https://github.com/JessemanGray/Syn-Aesthetics/assets/123507565/d033887b-02b1-4ba2-83e7-37f3b1d84b5b)
 Another aspect that may seem obscure but I feel is worth noting: one of the principles that I feel should be built in to any successful project is factoring in its environmental impact. Even though we can quantify the significant value that simple fixes like having a dark background, or prioritizing red, green, and orange over blue seem pointless compared to the degree of climate change occuring, but there is a power in being able to exponentially increase the benefits, as opposed to deferring to the status quo.
 
-
+![Screen Shot 2024-01-20 at 2 34 13 PM](https://github.com/JessemanGray/Syn-Aesthetics/assets/123507565/27ddae47-4d8a-4050-93f8-bb6b8c5e9fb7)
 
 It may seem like just optics 👀 if there are not other measures, but even then it can raise awareness of the need for micro-progessions as well as major improvements in consumption habits.
 
+![Screen Shot 2024-01-20 at 2 34 13 PM](https://github.com/JessemanGray/Syn-Aesthetics/assets/123507565/27ddae47-4d8a-4050-93f8-bb6b8c5e9fb7)
+
 By tweaking the basic tools used to complete common visualization tasks, the data is not only more appealing to my personal sensibilities, but has a distinctly smaller footprint than many Power BI, Tableau, and Excel dashboards. When we hard code vectorization and quantization into the model, we get an even better performance. As someone who's main experience with sustainable design is in building and bio-char, I am still learning about best practices in data managemant, storage, and development, so open to suggestions and contributions there for sure :)
-
-
-![Screen Shot 2024-01-20 at 2 33 18 PM](https://github.com/JessemanGray/Syn-Aesthetics/assets/123507565/d033887b-02b1-4ba2-83e7-37f3b1d84b5b)
-
-
-![Screen Shot 2024-01-20 at 2 34 13 PM](https://github.com/JessemanGray/Syn-Aesthetics/assets/123507565/27ddae47-4d8a-4050-93f8-bb6b8c5e9fb7)
-
-![Screen Shot 2024-01-20 at 2 34 13 PM](https://github.com/JessemanGray/Syn-Aesthetics/assets/123507565/27ddae47-4d8a-4050-93f8-bb6b8c5e9fb7)
-Here is a rabbit-hole that I would like to explore related to the data viz of this project. By removing all values and subject matter we get an approximation of the data points that resembles a unique cloud structure. By abstracting the relationships we can make inferences that might not be as apparent as labeled data. This basic principle could have legs in regards to computer vision and re-inputting to see how a GAN model might interpret it. 
 
 ![Screen Shot 2024-01-20 at 2 35 36 PM](https://github.com/JessemanGray/Syn-Aesthetics/assets/123507565/91e603a0-98e3-4e97-ad5b-e19f71112b30)
 
-Training and Validation Loss and Learning Rate. 
+
+Here is a rabbit-hole that I would like to explore related to the data viz of this project. By removing all values and subject matter we get an approximation of the data points that resembles a unique cloud structure. By abstracting the relationships we can make inferences that might not be as apparent as labeled data. This basic principle could have legs in regards to computer vision and re-inputting to see how a GAN model might interpret it. 
 
 ![Screen Shot 2024-01-20 at 2 36 07 PM](https://github.com/JessemanGray/Syn-Aesthetics/assets/123507565/c27c4c5c-f386-469a-bdf0-3f950a9eba14)
 
-
 ![Screen Shot 2024-01-20 at 2 37 47 PM](https://github.com/JessemanGray/Syn-Aesthetics/assets/123507565/507e8d3d-7caf-4e9f-b5c9-9b8ed7fde78a)
 
-These represent only a few of the visualizations and predictive models used in this project, and only a fraction of the ones I hope to usein future exploratory analysis. The best performing so far turned out to be an LSTM, but plan to employ Lasso, Elastic-net on the conservative side, and iForest and iTree as a bleeding edge example.
-
+Training and Validation Loss and Learning Rate. 
 
 ![Screen Shot 2024-01-20 at 2 38 17 PM](https://github.com/JessemanGray/Syn-Aesthetics/assets/123507565/74e0770a-b2f3-4556-857f-6143a117be15)
 
+These represent only a few of the visualizations and predictive models used in this project, and only a fraction of the ones I hope to usein future exploratory analysis. The best performing so far turned out to be an LSTM, but plan to employ Lasso, Elastic-net on the conservative side, and iForest and iTree as a bleeding edge example.
 
 ![Screen Shot 2024-01-20 at 2 38 25 PM](https://github.com/JessemanGray/Syn-Aesthetics/assets/123507565/7c262609-8f2d-4ad0-b27d-3418546706ca)
 
