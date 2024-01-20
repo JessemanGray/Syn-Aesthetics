@@ -10,7 +10,7 @@ While not perhaps the most dramatic or dangerous example of generalized artifici
 
 Description:
 
-A comprehensive study of the 'uncanny valley' effect in AI-generated media, and its implications on AI adoption
+Data-driven study of the 'uncanny valley' effect in AI-generated media, and its implications on AI adoption
 
 Key Features:
 
@@ -20,11 +20,18 @@ Insightful visualizations of the physical and emotional responses to AI-generate
 Innovative approach to engineering more concordant AI models.
 
 Installation
-For this project I wanted to keep things lightweight and flexible to maximize accessibility and focus on EDA instead of trying to create a toolkit to address the question at hand. Google Colab Jupyter notebooks offer a user friendly framework for data science, and internally support some of the most effective packages and libraries for modeling and visualisation. The datasets we are working with are available in this repository, and also via Harvard dataverse here: 
+For this project I wanted to keep things lightweight and flexible to maximize accessibility and focus on EDA instead of trying to create a toolkit to address the question at hand. Google Colab Jupyter notebooks offer an open source user-friendly framework for data science, and internally support some of the most effective packages and libraries for modeling and visualisation. Colab is a bit of a sleeper hit, I've been surprised that it's not as widely adopted. More info can be found here: 
+
+https://colab.research.google.com/
+
+and there is a link at the top of each notebook in the repository. Eventually I hope to expand current notebooks to include EDA of other datasets in ChillsDB, and continue sifting through to perform more fine-grained analysis. I also plan to include ongoing research into other examples of the uncanny valley effect in popular culture and historic context, such as reigious likenesses and artifacts, and the trope of the zombie apocalypse. By dissecting the concepts of 'good bad', and bad good', along with what I call the 'stained glass' effect, which is the ehereal quality of light that many GAN image generators seem to understand implicitly. 
+
+The datasets we are working with are available in this repository as well, or via Harvard dataverse here: 
 
 https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/ADLSZE 
 
 along with several other ChillsDb datasets that were not part of this project.
+
 
 Usage
 This project is a preliminary exploration of data that could be used to accurately gauge biometric responses to various media. Possible applications could include productizing to be included in fitbit and other wearable tchnologies, and research into quantifying the uncanny valleyt effect in different population groups. 
