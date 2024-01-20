@@ -7,6 +7,10 @@ Overview
 Description(long stoy short)
 Key features
 Installation
+Usage
+License
+Contributions
+Contact
 
 Overview:
 A substantial body of research and development has been invested into studying the effects of the 'uncanny valley' in film, animation, and visual media, but much less attention has been paid to how these reactions relate to other media that use AI algorithms to approximate human observation and interaction. Within these emerging technologies is the potential presence of an inherent stress-inducing quality in LLM-driven writing, speech, music, and chat models, possibly even extending to self-driving cars. Could regularly interacting with a generative pre-trained model instill a measurable sense of dysphoria?
@@ -46,44 +50,78 @@ https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/ADLSZE
 
 along with several other ChillsDb datasets that are not yet part of this project.
 
+
+Standard Import Library for EDA and data viz:
 ![Screen Shot 2024-01-20 at 2 31 18 PM](https://github.com/JessemanGray/Syn-Aesthetics/assets/123507565/80ffc35e-d4da-46d3-adaf-93b7b6d36403)
+
+Next we import our datasets from the Syn-Aesthetic repository for ease of access. Initially I kept them in Google Drive to work with at home. Looking forward to comparing the other available datasets. Initially this project was focused solely on good chills, with inspirational speeches, frisson in music, and good chills in movies being the focus. As the project has evolved the I am  interested in expanding the spotlight to driving and piloting simulations, aautonomous vehicles, and other deep reinforcement learning systems. 
 
 ![Screen Shot 2024-01-20 at 2 32 11 PM](https://github.com/JessemanGray/Syn-Aesthetics/assets/123507565/e83eb232-9c59-4848-9a78-19dad2e2b74b)
 
+As a visual learner, using eye candy is a core part of my EDA process. By pushing the initial data set through various filters and comparing multiple variabless, a different storyline than the one I had originally made an outline for emerged. As one of my first completed self-driven projects that I felt had value in sharing with the data science and machine learning community, the patterns that stood out inspired me to take a different direction entirely, and allowed some leaps of thought that wouldn't have been possible otherwise. 
+
+Another aspect that may seem obscure but I feel is worth noting: one of the principles that I feel should be built in to any successful project is factoring in its environmental impact. Even though we can quantify the significant value that simple fixes like having a dark background, or prioritizing red, green, and orange over blue seem pointless compared to the degree of climate change occuring, but there is a power in being able to exponentially increase the benefits, as opposed to deferring to the status quo.
+
+
 ![Screen Shot 2024-01-20 at 2 32 45 PM](https://github.com/JessemanGray/Syn-Aesthetics/assets/123507565/bd1e5076-7514-4f23-aad4-0540cb74fb24)
 
+It may seem like just optics 👀 if there are not other measures, but even then it can raise awareness of the need for micro-progessions as well as major improvements in consumption habits.
+
+By tweaking the basic tools used to complete common visualization tasks, the data is not only more appealing to my personal sensibilities, but has a distinctly smaller footprint than many Power BI, Tableau, and Excel dashboards. When we hard code vectorization and quantization into the model, we get an even better performance. As someone who's main experience with sustainable design is in building and bio-char, I am still learning about best practices in data managemant, storage, and development, so open to suggestions and contributions there for sure :)
 
 
 ![Screen Shot 2024-01-20 at 2 32 45 PM](https://github.com/JessemanGray/Syn-Aesthetics/assets/123507565/a1ddec38-b9fe-499c-86a5-a173a3ff7f8d)
 
 ![Screen Shot 2024-01-20 at 2 33 18 PM](https://github.com/JessemanGray/Syn-Aesthetics/assets/123507565/d033887b-02b1-4ba2-83e7-37f3b1d84b5b)
 
+Here is a rabbit-hole that I would like to explore related to the data viz of this project. By removing all values and subject matter we get an approximation of the data points that resembles a unique cloud structure. By abstracting the relationships we can make inferences that might not be as apparent as labeled data. This basic principle could have legs in regards to computer vision and re-inputting to see how a GAN model might interpret it. 
+
 ![Screen Shot 2024-01-20 at 2 34 13 PM](https://github.com/JessemanGray/Syn-Aesthetics/assets/123507565/27ddae47-4d8a-4050-93f8-bb6b8c5e9fb7)
 
 
 ![Screen Shot 2024-01-20 at 2 35 36 PM](https://github.com/JessemanGray/Syn-Aesthetics/assets/123507565/91e603a0-98e3-4e97-ad5b-e19f71112b30)
-
+Training and Validation Loss and Learning Rate. 
 
 ![Screen Shot 2024-01-20 at 2 36 07 PM](https://github.com/JessemanGray/Syn-Aesthetics/assets/123507565/c27c4c5c-f386-469a-bdf0-3f950a9eba14)
 
 
 ![Screen Shot 2024-01-20 at 2 37 47 PM](https://github.com/JessemanGray/Syn-Aesthetics/assets/123507565/507e8d3d-7caf-4e9f-b5c9-9b8ed7fde78a)
 
+These represent only a few of the visualizations and predictive models used in this project, and on;y a fraction of the ones I hope to usein future exploratory analysis. The best performing so far turned out to be an LSTM, but plan to employ Lasso, Elastic-net on the conservative side, and iForest and iTree as a bleeding edge example.
 
 
+![Screen Shot 2024-01-20 at 2 38 17 PM](https://github.com/JessemanGray/Syn-Aesthetics/assets/123507565/74e0770a-b2f3-4556-857f-6143a117be15)
 
 
+![Screen Shot 2024-01-20 at 2 38 25 PM](https://github.com/JessemanGray/Syn-Aesthetics/assets/123507565/7c262609-8f2d-4ad0-b27d-3418546706ca)
 
 Usage:
-This project is a preliminary exploration of data that could be used to accurately gauge biometric responses to various media. Possible applications could include productizing to be included in fitbit and other wearable tchnologies, and research into quantifying the uncanny valleyt effect in different population groups. 
+
+This project is a preliminary exploration of this data that could eventually be used to accurately gauge biometric responses to various media. Possible applications could include productizing to be included in fitbit and other wearable tchnologies, and research into quantifying the uncanny valleyt effect in different population groups. 
 
 Eventually I hope to expand current notebooks to include EDA of other datasets in ChillsDB, and continue sifting through to perform more fine-grained analysis. I also plan to include ongoing research into other examples of the uncanny valley effect in popular culture and historic context, such as reigious likenesses and artifacts, and the trope of the zombie apocalypse. By dissecting the concepts of 'good bad', and bad good', along with what I call the 'stained glass' effect, which is the ehereal quality of light that many GAN image generators seem to understand implicitly. 
+
 License:
 
 This project is licensed under the MIT License - see the LICENSE.md file for details
+
+Contributions:
+
+Any and all insight into the phenomenon of the uncanny valley is hughly encouraged.
+If so inclined, please follow the following guidelines:
+
+🍴this repository to access a copy to work with.
+Grow a new 🌱  to keep changes organized.
+💍 Please write clear commit messages.
+Push to the 🍴 repository to upload your changes to GitHub.
+Please submit a pull request so we can review your changes 🔍.
+Your contribution is valued 💰
+Thanks for your ⏳
+
 
 Contact:
 
 Jesse Gray
 jessemangray@gmail.com
+jessemangray@icloud.com
 
