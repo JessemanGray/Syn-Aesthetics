@@ -2,24 +2,6 @@
 
 https://medium.com/@JesseGray/aesthetic-dysphoria-asking-for-directions-in-the-uncanny-valley-c323e3b79776
 
-Table of Contents:
-
-Overview
-
-Description(long story short)
-
-Key features
-
-Installation
-
-Usage
-
-License
-
-Contributions
-
-Contact
-
 Overview:
 A substantial body of research and development has been invested into studying the effects of the 'uncanny valley' in film, animation, and visual media, but much less attention has been paid to how these reactions relate to other media that use AI algorithms to approximate human observation and interaction. Within these emerging technologies is the potential presence of an inherent stress-inducing quality in LLM-driven writing, speech, music, and chat models, possibly even extending to self-driving cars. Could regularly interacting with a generative pre-trained model instill a measurable sense of dysphoria?
 
