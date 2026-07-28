@@ -15,17 +15,38 @@ if "processor" not in st.session_state:
         st.session_state.processor = SynAestheticsDataProcessor()
         df, G = st.session_state.processor.run_pipeline()
         st.session_state.G = G
-        st.session_state.rag = ChillsRAGSystem(graph=G, use_llm=False)
+        st.session_state.rag = ChillsRAGSystem(graph=G, use_llm=True)
         st.session_state.messages = []
+        st.session_state.df = df
 
+# --- HEADER ---
 st.title("🧊 ChillsDB Knowledge Graph Explorer")
+st.caption("Interactive visualization of aesthetic chills responses with RAG-powered querying")
 
-# Layout: KG visualization on top, chat below
-col1, col2 = st.columns([3, 1])
+# --- TOP METRICS ROW ---
+col1, col2, col3, col4, col5 = st.columns(5)
+stats = st.session_state.rag.get_statistics()
+df_processed = st.session_state.df
 
-with col1:
-    st.subheader("3D Knowledge Graph")
-    # Render the KG from the stored graph
+if df_processed is not None:
+    polarity_counts = df_processed['Polarity'].value_counts()
+    beneficial = polarity_counts.get('Beneficial', 0) + polarity_counts.get('Mildly Beneficial', 0)
+    detrimental = polarity_counts.get('Detrimental', 0) + polarity_counts.get('Mildly Detrimental', 0)
+else:
+    beneficial = 0
+    detrimental = 0
+
+col1.metric("KG Nodes", stats['total_nodes'])
+col2.metric("Beneficial", beneficial, delta="+")
+col3.metric("Detrimental", detrimental, delta="-")
+col4.metric("Avg Intensity", f"{df_processed['Intensity'].mean():.1f}" if df_processed is not None else "N/A")
+col5.metric("Model", "Pleias-RAG-1B" if stats['llm_available'] else "Off")
+
+# --- MAIN LAYOUT: Graph + Sidebar ---
+left_col, right_col = st.columns([4, 1])
+
+with left_col:
+    st.subheader("🌐 3D Knowledge Graph")
     G = st.session_state.G
     
     edge_x, edge_y, edge_z = [], [], []
@@ -42,7 +63,13 @@ with col1:
     node_colors = [G.nodes[n]['color'] for n in G.nodes]
     
     hover_text = [
-        f"Media: {G.nodes[n]['media']}<br>Polarity: {G.nodes[n]['polarity']}<br>Rating: {G.nodes[n]['rating']:.1f}<br>Intensity: {G.nodes[n]['intensity']:.1f}<br>Valence: {G.nodes[n]['valence']:.2f}"
+        f"Media: {G.nodes[n]['media']}<br>"
+        f"Polarity: {G.nodes[n]['polarity']}<br>"
+        f"Rating: {G.nodes[n]['rating']:.1f}<br>"
+        f"Intensity: {G.nodes[n]['intensity']:.1f}<br>"
+        f"Valence: {G.nodes[n]['valence']:.2f}<br>"
+        f"Chills Ratio: {G.nodes[n].get('chills_ratio', 0):.2f}<br>"
+        f"Blob Polarity: {G.nodes[n].get('blob_polarity', 'neutral')}"
         for n in G.nodes
     ]
     
@@ -56,7 +83,7 @@ with col1:
     fig.add_trace(go.Scatter3d(
         x=node_x, y=node_y, z=node_z,
         mode='markers',
-        marker=dict(size=9, color=node_colors, opacity=0.9, line=dict(width=0)),
+        marker=dict(size=12, color=node_colors, opacity=0.9, line=dict(width=0)),
         text=hover_text, hoverinfo='text', showlegend=False
     ))
     fig.update_layout(
@@ -67,21 +94,28 @@ with col1:
         paper_bgcolor='black', plot_bgcolor='black',
         margin=dict(l=0, r=0, b=0, t=0),
         hoverlabel=dict(bgcolor='black', font=dict(color='white', size=11)),
-        showlegend=False
+        showlegend=False,
+        height=700
     )
     fig.update_layout(scene_camera=dict(eye=dict(x=2.0, y=2.0, z=1.0), center=dict(x=0, y=0, z=0)))
     st.plotly_chart(fig, use_container_width=True)
 
-with col2:
-    st.subheader("📊 Stats")
-    stats = st.session_state.rag.get_statistics()
-    st.metric("KG Nodes", stats['total_nodes'])
-    st.metric("LLM", "Off" if not stats['llm_available'] else "On")
-    st.caption("Red = Detrimental · Blue = Beneficial")
+with right_col:
+    st.subheader("📊 Quick Stats")
+    if df_processed is not None:
+        st.markdown("**Polarity Distribution**")
+        st.dataframe(polarity_counts.reset_index().rename(columns={'index': 'Polarity', 'Polarity': 'Count'}), height=150)
+        st.markdown("**Intensity Clusters**")
+        cluster_counts = df_processed['Intensity_Cluster'].value_counts()
+        st.dataframe(cluster_counts.reset_index().rename(columns={'index': 'Cluster', 'Intensity_Cluster': 'Count'}), height=150)
+        st.markdown("**Response Categories**")
+        resp_counts = df_processed['Response_Category'].value_counts()
+        st.dataframe(resp_counts.reset_index().rename(columns={'index': 'Category', 'Response_Category': 'Count'}), height=150)
+    st.caption("🔴 Red = Detrimental · 🔵 Blue = Beneficial")
 
-# Chat / RAG Query Interface
+# --- CHAT / QUERY INTERFACE ---
 st.subheader("🔍 Query the Knowledge Graph")
-prompt = st.chat_input("Ask about chills patterns, polarity, or stimuli...")
+prompt = st.chat_input("Ask about chills patterns, polarity, intensity, or stimuli...")
 
 if prompt:
     st.session_state.messages.append({"role": "user", "content": prompt})
@@ -89,19 +123,24 @@ if prompt:
         st.markdown(prompt)
     
     with st.chat_message("assistant"):
-        with st.spinner("Searching KG..."):
-            results = st.session_state.rag.query(prompt, n_results=5)
-            if results:
-                for i, r in enumerate(results):
+        with st.spinner("Searching KG and generating aligned response..."):
+            result = st.session_state.rag.query(prompt, n_results=5, generate=True)
+            
+            if isinstance(result, str):
+                # Generated response from the aesthetic alignment layer
+                st.markdown(result)
+                st.session_state.messages.append({"role": "assistant", "content": result})
+            elif isinstance(result, list) and result:
+                # Fallback: raw retrieval results
+                for i, r in enumerate(result):
                     with st.expander(f"Result {i+1} — Media: {r['metadata']['media']} (Score: {r['similarity_score']:.3f})"):
                         st.write(f"**Polarity:** {r['metadata']['polarity']}")
                         st.write(f"**Rating:** {r['metadata']['rating']:.1f}")
                         st.write(f"**Intensity:** {r['metadata']['intensity']:.1f}")
                         st.write(f"**Valence:** {r['metadata']['valence']:.2f}")
-                        st.write(f"**Modality:** {r['metadata'].get('modality', 'Unknown')}")
-                        st.write(f"**Context:** {r['metadata'].get('context', 'N/A')}/4")
-                        st.caption(f"Distance: {r['distance']:.4f}")
+                        st.write(f"**Chills Ratio:** {r['metadata'].get('chills_ratio', 0):.2f}")
+                        st.caption(f"Distance: {r['similarity_score']:.4f}")
+                st.session_state.messages.append({"role": "assistant", "content": f"Found {len(result)} results"})
             else:
                 st.write("No matching nodes found.")
-    
-    st.session_state.messages.append({"role": "assistant", "content": f"Found {len(results)} results" if results else "No results"})
+                st.session_state.messages.append({"role": "assistant", "content": "No results"})

@@ -6,6 +6,7 @@ import io
 import networkx as nx
 from scipy.spatial import KDTree
 from sklearn.preprocessing import MinMaxScaler
+from pathlib import Path
 
 class SynAestheticsDataProcessor:
     def __init__(self):
@@ -29,6 +30,17 @@ class SynAestheticsDataProcessor:
             raise ValueError("No data file found on Figshare")
         print(f"✅ Loaded {len(self.df)} records")
         return self.df
+
+    def load_stimuli_data(self):
+        """Load the stimuli metadata from the blob processor output."""
+        stimuli_path = Path("stimuli_merged.csv")
+        if stimuli_path.exists():
+            self.df_stimuli = pd.read_csv(stimuli_path)
+            print(f"✅ Loaded {len(self.df_stimuli)} stimuli from {stimuli_path}")
+        else:
+            self.df_stimuli = None
+            print("⚠️ No stimuli_merged.csv found. Run blob_processor.py first.")
+        return self.df_stimuli
 
     def process_chills_data(self):
         df = self.df.copy()
@@ -188,6 +200,22 @@ class SynAestheticsDataProcessor:
     def build_phyllotactic_kg(self):
         df = self.df_processed.sample(min(len(self.df_processed), 5000), random_state=42).reset_index(drop=True)
         
+        # Load stimuli metadata if available
+        self.load_stimuli_data()
+        stimuli_lookup = {}
+        if self.df_stimuli is not None:
+            for _, row in self.df_stimuli.iterrows():
+                name = row.get('Stimulus', '')
+                if name:
+                    stimuli_lookup[name] = {
+                        'chills_ratio': float(row.get('chills_ratio', 0)),
+                        'mean_intensity': float(row.get('mean_intensity', 0)),
+                        'mean_valence': float(row.get('mean_valence', 0)),
+                        'mean_arousal': float(row.get('mean_arousal', 0)),
+                        'mean_liking': float(row.get('mean_liking', 0)),
+                        'polarity': row.get('polarity', 'neutral')
+                    }
+        
         scaler = MinMaxScaler()
         features = scaler.fit_transform(df[['Chill_Rating', 'Valence']].fillna(0).abs())
         
@@ -220,6 +248,9 @@ class SynAestheticsDataProcessor:
         
         G = nx.Graph()
         for _, row in df.iterrows():
+            media_label = row['Media_Label']
+            stim_data = stimuli_lookup.get(media_label, {})
+            
             G.add_node(
                 str(row.name),
                 pos=(row['kg_x'], row['kg_y'], row['kg_z']),
@@ -229,10 +260,17 @@ class SynAestheticsDataProcessor:
                 intensity=row['Intensity'],
                 valence=row['Valence'],
                 arousal=row['Arousal'],
-                media=row['Media_Label'],
+                media=media_label,
                 modality=row['Modality'],
                 response=row['Response_Category'],
-                context=row['Context_Richness']
+                context=row['Context_Richness'],
+                # Stimuli metadata fields from blob processor
+                chills_ratio=stim_data.get('chills_ratio', 0),
+                mean_intensity=stim_data.get('mean_intensity', 0),
+                mean_valence=stim_data.get('mean_valence', 0),
+                mean_arousal=stim_data.get('mean_arousal', 0),
+                mean_liking=stim_data.get('mean_liking', 0),
+                blob_polarity=stim_data.get('polarity', 'neutral')
             )
         
         positions = df[['kg_x', 'kg_y', 'kg_z']].values
