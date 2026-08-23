@@ -107,6 +107,19 @@ Your time and contribution is valued ⏳ 💰
 
 Thanks!
 
+
+## Citation and Acknowledgments
+
+This project uses data from the **ChillsDB** research kit, a validated database of audiovisual stimuli developed to study aesthetic chills [citation:3][citation:5][citation:6]. 
+
+The ChillsDB project was co-invented by **Felix Schoeller**, **Abhinandan Jain**, **Adam Haar Horowitz**, **Grace Yan**, **Xiaoxiao Hu**, **Pattie Maes**, and **Roy Salomon** [citation:3][citation:5][citation:6]. The machine learning models and subsequent expansions were developed in collaboration with **Nicco Reggente** and others at the Institute for Advanced Consciousness Studies [citation:4][citation:7].
+
+If you use this dataset or build upon this work, please cite the original publication:
+
+> **Schoeller, F., Jain, A., Horowitz, A. H., Yan, G., Hu, X., Maes, P., & Salomon, R.** (2023). ChillsDB: A Gold Standard for Aesthetic Chills Stimuli. *Scientific Data*, *10*(1), 307. [https://doi.org/10.1038/s41597-023-02064-8](https://doi.org/10.1038/s41597-023-02064-8) [citation:6][citation:8]
+
+The dataset is publicly available via the [Harvard Dataverse](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/ADLSZE) and the official [ChillsTV website](https://chillstv.com/).
+
 For a deeper dive into the thought process and conclusions behind this notebook please see the Medium article link at the top of this page 👆
 
 Contact:
@@ -114,4 +127,6 @@ Contact:
 Jesse Gray
 jessemangray@gmail.com
 jessemangray@icloud.com
+
+https://chillstv.com/
 
